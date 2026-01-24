@@ -1,0 +1,123 @@
+/* --- RESET Y ESTILOS BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#addTaskBtn {
+    background-color: #4a90e2;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: none;
+    padding: 0 20px;
+    border-radius: 8px;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fdfdfd;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid #4a90e2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.task-item.completed {
+    border-left-color: #2ecc71;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-item span {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.buttons button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 6px;
+}
+
+.edit-btn {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    #addTaskBtn {
+        padding: 12px;
+    }
+}
